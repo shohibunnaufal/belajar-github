@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>checkbox</title>
+    </head>
+    <body>
+        pilihlah maksimal 15 sks<br>
+        <form name="formtes" action="testform.html" method="post">        
+        <script language="javascript">
+            //kode - kode script
+            function cek_krs() {
+                var jum_sks = 0;
+                for(var i = 0; i < 6; i++) {
+                    if(document.formtes.elemets[i].checked)
+                        jum_sks += matakuliah [i][2];
+                }
+                document.formtes.fieldjumlah.value = jum_sks;
+                if (jum_sks > 15)
+                    alert ("anda harus mengurangi sks\n"+"karena melebihi 15 sks");
+            }
+            function cek_kirim (){
+                if(document.formtes.fieldjumlah.value > 15)
+                    alert("anda harus mengurangi sks\n"+"karena melebihi 15 sks");
+                else
+                    window.location.href = "testform.html";
+            }
+            var matakuliah = [["TKD164","Pemrograman Web",3].["TKD163","sistem informasi",3],["TKD162","basis data",3],["TKD161","matematika","3"],["TKD160","analisa desain si",3],["TKD159","pbo",3]];
+        nt.write("<table border='2'>");
+        nt.write("<tr><th>kode</th><th>matakuliah</th>");
+        nt.write("<th>sks</th><th>pilihan</th></tr>");
+        for (i = 0; i<6; i++) {
+        cument.write("<tr><td>"+matakuliah[i][0]+"</td><td>"+matakuliah[i][1]+"</td><td><input type='checkbox'"+"name ='mk'"+matakuliah[i][0]+" ' "+"onclick ='cek_krs()'>");
+        }
+        t.write("<tr><td colspan ='2'>");
+            document.write("align ='right' > jumlah sks </td> ");
+            document.write("<td colspan='2'>");
+            document.write("<input type='text' value='0'");
+            document.write("size='3'");
+            document.write("name='fieldjumlah'</td></tr>");
+            document.write("</table>");
+        </script>
+        <input type="button" name="tombolkirim" value="kirim" onclick="cekkirim()"> 
+        </form>
+    </body>
+</html>

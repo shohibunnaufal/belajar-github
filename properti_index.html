@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>properti index</title>
+    </head>
+    <body>
+        <script language="javascript">
+        //kode - kode script
+        var kalimat = "ku mau makan nasi goreng";
+        var dicari = /makan/;
+        var cocok = dicari.exec(kalimat);
+        document.write("kalimat :" +kalimat+"<br>");
+        document.write("kata yang dicocokkan :"+cocok+"<br>");
+        if(cocok != null){
+            document.write("index ke-"+cocok.index);
+        }
+        </script>
+    </body>
+</html>

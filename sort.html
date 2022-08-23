@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>sort</title>
+    </head>
+    <body>
+        <script language="javascript">
+        //kode - kode script
+        var angka = new Array(1984,11,14,2008,12,2003);
+        document.write("asli:"+angka+"<br>");
+        document.write("hasil ascending:"+angka.sort()+"<br>");
+        function urut_descending(x,y){
+            if(x>y)
+                return (-1);
+            if(x==y)
+                return (0);
+            if(x<y)
+                return (1);
+        }
+        document.write("hasil descending : "+angka.sort(urut_descending));
+        </script>
+    </body>
+</html>

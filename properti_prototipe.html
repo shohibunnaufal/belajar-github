@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>properti prototipe</title>
+    </head>
+    <body>
+        <script language="javascript">
+            //kode - kode script
+            function tampil_elemen_array(){
+                for(var i=0; i<this.length; i++){
+                    document.write("["+i+"] = "+this[i]+"<br>");
+                }
+            }
+            Array.prototype.cetak = tampil_elemen_array;
+            var kota = new Array("bandung","malang");
+            var tanaman = new Array("melati","matahari");
+            document.write("kota-kota : <br>");
+            kota.cetak();
+            document.write("tanaman :<br>");
+            tanaman.cetak();
+        </script>
+    </body>
+</html>
